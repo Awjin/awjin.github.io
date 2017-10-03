@@ -394,7 +394,7 @@ body {
   padding: 0 25px 10vh 12.5px;
   font-family: 'PT Sans', 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 20px;
-  line-height: 1.4;
+  line-height: 1.5;
   background: #fff;
   color: #000; }
   @media all and (min-width: 1000px) {
@@ -433,32 +433,32 @@ header a {
 section {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  margin: 10vh auto;
+  margin: 12.5vh auto;
   padding: 2.5vw 0 3vw 0; }
   section > * {
-    border: 1px solid lightgray;
     width: 100%;
-    margin: .5rem .75rem;
+    margin: .5rem auto;
     word-wrap: break-word; }
     @media all and (min-width: 750px) {
       section > * {
         width: 45%; } }
 
-.section-projects > *:last-child {
-  margin-right: auto; }
+.section-contact > * {
+  width: 100%; }
 
 .narrative {
   font-family: 'PT Serif', Georgia, serif;
+  font-size: 96%;
   font-style: italic;
-  font-size: 95%;
   color: #111; }
   @media all and (min-width: 750px) {
     .narrative {
-      width: 66%; } }
-  .narrative > * {
-    width: 100%; }
+      margin-right: 0; }
+      .narrative > * {
+        width: 66%;
+        margin-right: 0; } }
 
 .banner {
   max-width: 100%;
@@ -468,7 +468,7 @@ h1,
 h2 {
   margin: 0;
   font-weight: bold;
-  line-height: 1.2; }
+  line-height: 1.3; }
 
 h1 {
   font-size: 250%; }
