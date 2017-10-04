@@ -422,7 +422,7 @@ header {
   header a {
     padding: 20px 15px;
     text-decoration: none;
-    color: #bbb; }
+    color: #aaa; }
     @media all and (min-width: 1000px) {
       header a {
         padding: 3vh 2vw; } }
@@ -494,11 +494,10 @@ h2 {
 a {
   color: #000; }
   a:hover, a:focus, a:active {
-    color: #bbb; }
+    color: #aaa; }
 
 img {
-  max-width: 80%;
-  max-height: 75vh; }
+  max-width: 80%; }
 
 .space-bottom {
   margin-bottom: 1.5rem; }
