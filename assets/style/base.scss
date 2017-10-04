@@ -36,7 +36,7 @@ header {
     a {
         padding: 20px 15px;
         text-decoration: none;
-        color: #bbb;
+        color: #aaa;
 
         @media all and (min-width: 1000px) {
             padding: 3vh 2vw;
@@ -138,13 +138,12 @@ a {
     &:hover,
     &:focus,
     &:active {
-        color: #bbb;
+        color: #aaa;
     }
 }
 
 img {
     max-width: 80%;
-    max-height: 75vh;
 }
 
 .space-bottom {
