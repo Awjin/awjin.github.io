@@ -1,6 +1,6 @@
 html,
 body {
-    padding: 0 25px 10vh 12.5px;
+    padding: 0 25px 0 12.5px;
     font-family: 'PT Sans', 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 20px;
     line-height: 1.5;
@@ -8,7 +8,7 @@ body {
     color: #000;
 
     @media all and (min-width: 1000px) {
-        padding: 5vh 8vw 10vh 7vw;
+        padding: 2.5vh 8vw 2.5vh 7vw;
         font-size: 2vw;
     }
 }
@@ -29,22 +29,22 @@ header {
     @media all and (min-width: 1000px) {
         padding: 5vh 0;
     }
-}
 
-header a {
-    padding: 20px 15px;
-    text-decoration: none;
-    color: #bbb;
+    a {
+        padding: 20px 15px;
+        text-decoration: none;
+        color: #bbb;
 
-    @media all and (min-width: 1000px) {
-        padding: 3vh 2vw;
-    }
+        @media all and (min-width: 1000px) {
+            padding: 3vh 2vw;
+        }
 
-    &:hover,
-    &:focus,
-    &:active {
-        color: #111;
-        outline: 0;
+        &:hover,
+        &:focus,
+        &:active {
+            color: #111;
+            outline: 0;
+        }
     }
 }
 
@@ -67,16 +67,22 @@ section {
     }
 }
 
-.section-contact > * {
-    width: 100%;
-}
-
-
 .narrative {
     font-family: 'PT Serif', Georgia, serif;
     font-size: 96%;
     font-style: italic;
     color: #111;
+
+    p {
+        background: #4A6682;
+        padding: .5rem 1rem .66rem 1rem;
+        border-radius: 1rem;
+    }
+
+    p,
+    a {
+        color: #fff;
+    }
 
     @media all and (min-width: 750px) {
         margin-right: 0;
@@ -108,6 +114,37 @@ h2 {
     font-size: 150%;
 }
 
+h1,
+h2,
+p {
+    margin-bottom: 1.5rem;
+}
+
 .large-text {
     font-size: 110%;
+}
+
+a {
+    color: #000;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: #bbb;
+    }
+}
+
+img {
+    max-width: 90%;
+    max-height: 75vh;
+}
+
+h2 img {
+    height: 5rem;
+    vertical-align: bottom;
+}
+
+.spaced {
+    margin-top: 2rem;
+    margin-bottom: 2.5rem
 }

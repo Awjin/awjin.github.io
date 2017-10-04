@@ -391,7 +391,7 @@ template {
 
 html,
 body {
-  padding: 0 25px 10vh 12.5px;
+  padding: 0 25px 0 12.5px;
   font-family: 'PT Sans', 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 20px;
   line-height: 1.5;
@@ -400,7 +400,7 @@ body {
   @media all and (min-width: 1000px) {
     html,
     body {
-      padding: 5vh 8vw 10vh 7vw;
+      padding: 2.5vh 8vw 2.5vh 7vw;
       font-size: 2vw; } }
 
 header {
@@ -418,17 +418,16 @@ header {
   @media all and (min-width: 1000px) {
     header {
       padding: 5vh 0; } }
-
-header a {
-  padding: 20px 15px;
-  text-decoration: none;
-  color: #bbb; }
-  @media all and (min-width: 1000px) {
-    header a {
-      padding: 3vh 2vw; } }
-  header a:hover, header a:focus, header a:active {
-    color: #111;
-    outline: 0; }
+  header a {
+    padding: 20px 15px;
+    text-decoration: none;
+    color: #bbb; }
+    @media all and (min-width: 1000px) {
+      header a {
+        padding: 3vh 2vw; } }
+    header a:hover, header a:focus, header a:active {
+      color: #111;
+      outline: 0; }
 
 section {
   display: flex;
@@ -445,14 +444,18 @@ section {
       section > * {
         width: 45%; } }
 
-.section-contact > * {
-  width: 100%; }
-
 .narrative {
   font-family: 'PT Serif', Georgia, serif;
   font-size: 96%;
   font-style: italic;
   color: #111; }
+  .narrative p {
+    background: #4A6682;
+    padding: .5rem 1rem .66rem 1rem;
+    border-radius: 1rem; }
+  .narrative p,
+  .narrative a {
+    color: #fff; }
   @media all and (min-width: 750px) {
     .narrative {
       margin-right: 0; }
@@ -476,7 +479,29 @@ h1 {
 h2 {
   font-size: 150%; }
 
+h1,
+h2,
+p {
+  margin-bottom: 1.5rem; }
+
 .large-text {
   font-size: 110%; }
+
+a {
+  color: #000; }
+  a:hover, a:focus, a:active {
+    color: #bbb; }
+
+img {
+  max-width: 90%;
+  max-height: 75vh; }
+
+h2 img {
+  height: 5rem;
+  vertical-align: bottom; }
+
+.spaced {
+  margin-top: 2rem;
+  margin-bottom: 2.5rem; }
 
 /*# sourceMappingURL=style.css.map */
