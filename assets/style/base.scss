@@ -16,11 +16,11 @@ body {
 body {
     opacity: 1;
     transition: opacity .4s ease-in;
+}
 
-    .faded {
-        opacity: 0;
-        transition: none;
-    }
+.faded {
+    opacity: 0;
+    transition: none;
 }
 
 header {
