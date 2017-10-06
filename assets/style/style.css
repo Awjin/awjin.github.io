@@ -391,7 +391,7 @@ template {
 
 html,
 body {
-  padding: 0 25px 25px 12.5px;
+  padding: 0 30px 30px 12.5px;
   font-family: 'PT Sans', 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 20px;
   line-height: 1.5;
@@ -468,7 +468,7 @@ section {
     border-top-left-radius: 0;
     border-top-right-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
-    padding: .75rem .9rem .85rem 1rem; }
+    padding: .75rem .9rem .8rem 1rem; }
   .narrative img {
     height: 5rem;
     margin-bottom: .75rem;
