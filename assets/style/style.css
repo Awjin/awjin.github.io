@@ -391,6 +391,7 @@ template {
 
 html,
 body {
+  margin: 0;
   padding: 0 30px 30px 12.5px;
   font-family: 'PT Sans', 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 20px;
@@ -482,7 +483,18 @@ section {
   100% {
     transform: translateX(4px) rotate(3deg); } }
 .section-projects {
-  margin-top: -7.5vh; }
+  margin-top: -7.5vh;
+  overflow: hidden; }
+
+.showcase {
+  display: flex;
+  box-sizing: border-box;
+  min-height: 90vh;
+  width: 100%; }
+  .showcase > * {
+    flex: none;
+    box-sizing: border-box;
+    width: 100%; }
 
 .separator {
   margin: auto;
