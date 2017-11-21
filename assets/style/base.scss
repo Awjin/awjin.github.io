@@ -24,42 +24,42 @@ body {
     transition: none;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    padding: 30px 0;
-    writing-mode: vertical-rl;
-    text-transform: uppercase;
-    font-size: 75%;
-    letter-spacing: .1rem;
+// header {
+//     position: fixed;
+//     top: 0;
+//     bottom: 0;
+//     right: 0;
+//     padding: 30px 0;
+//     writing-mode: vertical-rl;
+//     text-transform: uppercase;
+//     font-size: 75%;
+//     letter-spacing: .1rem;
 
-    @media all and (min-width: 1000px) {
-        padding: 5vh 0;
-    }
+//     @media all and (min-width: 1000px) {
+//         padding: 5vh 0;
+//     }
 
-    nav {
-        display: flex;
-        overflow: auto;
-    }
+//     nav {
+//         display: flex;
+//         overflow: auto;
+//     }
 
-    a {
-        padding: 20px 15px;
-        text-decoration: none;
-        color: #aaa;
+//     a {
+//         padding: 20px 15px;
+//         text-decoration: none;
+//         color: #aaa;
 
-        @media all and (min-width: 1000px) {
-            padding: 3vh 2vw;
-        }
+//         @media all and (min-width: 1000px) {
+//             padding: 3vh 2vw;
+//         }
 
-        &:hover,
-        &:focus,
-        &:active {
-            color: #000;
-        }
-    }
-}
+//         &:hover,
+//         &:focus,
+//         &:active {
+//             color: #000;
+//         }
+//     }
+// }
 
 section {
     display: flex;
@@ -101,12 +101,6 @@ section {
         border-top-right-radius: 1.5rem;
         border-bottom-right-radius: 1.5rem;
         padding: .75rem .9rem .8rem 1rem;
-    }
-
-    img {
-        height: 5rem;
-        margin-bottom: .75rem;
-        // animation: wiggle 2s ease-in infinite;
     }
 }
 
@@ -174,15 +168,25 @@ h2 {
 }
 
 a {
-    color: #000;
+    color: #f00;
 
     &:hover,
     &:focus,
     &:active {
-        color: #aaa;
+        opacity: .4;
     }
 }
 
 img {
     max-width: 80%;
+}
+
+.img-talking-head {
+    height: 5rem;
+    margin-bottom: .75rem;
+}
+
+.align-left {
+    margin-right: auto;
+    margin-left: 0;
 }
