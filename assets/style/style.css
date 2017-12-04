@@ -396,7 +396,7 @@ body {
   color: #000; }
 
 body {
-  padding: 5vh 2rem 20vh 2rem;
+  padding: 5vh 2rem;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 20px;
   line-height: 1.4;
@@ -404,7 +404,7 @@ body {
   transition: opacity .4s ease-in; }
   @media all and (min-width: 750px) {
     body {
-      padding: 20vh 2rem 35vh 2rem; } }
+      padding: 20vh 2rem 10vh 2rem; } }
   @media all and (min-width: 1000px) {
     body {
       font-size: 2vw; } }
@@ -418,7 +418,7 @@ section {
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
-  margin: 5vh auto; }
+  margin: 5vh 0; }
   @media all and (min-width: 750px) {
     section {
       justify-content: center;
@@ -429,8 +429,8 @@ section {
 
 section > * {
   box-sizing: border-box;
-  margin: 5vh 0;
-  width: 100%; }
+  width: 100%;
+  margin: 5vh 0; }
   @media all and (min-width: 750px) {
     section > * {
       width: calc(37.5vw - 3rem);
@@ -439,26 +439,9 @@ section > * {
 section.showcase {
   font-size: 90%; }
 
-.divider {
-  max-width: 75vw;
-  margin: auto;
-  padding: 5vh 0;
-  text-align: center; }
-  @media all and (min-width: 750px) {
-    .divider {
-      padding: 10vh 0; } }
-  .divider img {
-    display: inline-block;
-    width: 40%; }
-
-footer {
-  margin: auto;
-  padding-top: 5vh; }
-  @media all and (min-width: 750px) {
-    footer {
-      width: calc(37.5vw - 3rem);
-      padding-top: 10vh; } }
-
+@media all and (min-width: 750px) {
+  footer {
+    padding-top: 10vh; } }
 h1,
 h2 {
   margin-top: 1rem;
@@ -473,8 +456,10 @@ h2 {
   font-size: 150%; }
 
 p {
-  margin-top: 0;
-  margin-bottom: 1.4rem; }
+  margin: 0; }
+
+p + p {
+  margin-top: 1.4rem; }
 
 a {
   color: #03f; }
@@ -482,6 +467,6 @@ a {
     opacity: 0.5; }
 
 img {
-  max-width: 80%; }
+  max-width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
