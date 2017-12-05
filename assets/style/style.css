@@ -397,7 +397,7 @@ body {
   color: #000; }
 
 body {
-  padding: 5vh 2rem 10vh 2rem;
+  padding: 5vh 2rem;
   line-height: 1.4;
   font-family: 'PT Sans', Helvetica, sans-serif;
   font-size: 20px;
@@ -405,7 +405,7 @@ body {
   transition: opacity .4s ease-in; }
   @media all and (min-width: 750px) {
     body {
-      padding-top: 20vh; } }
+      padding: 20vh 2rem 10vh 2rem; } }
   @media all and (min-width: 1000px) {
     body {
       font-size: 2vw; } }
@@ -430,13 +430,16 @@ section.no-margin {
   margin-top: 0; }
 
 section.showcase {
-  align-items: flex-start; }
+  align-items: flex-start;
+  justify-content: space-between; }
+  @media all and (min-width: 750px) {
+    section.showcase {
+      max-width: 70vw; } }
   section.showcase p {
     font-size: 80%; }
   section.showcase h2 {
     margin-bottom: .25rem;
-    font-size: 100%;
-    font-weight: bold; }
+    font-size: 100%; }
 
 section > * {
   box-sizing: border-box;
@@ -448,20 +451,20 @@ section > * {
       margin: 1.5rem; } }
 
 section.showcase > * {
-  margin: 0;
-  padding: 1rem; }
+  margin: 2rem 0; }
   @media all and (min-width: 750px) {
     section.showcase > * {
-      padding: 3.75vh 5vw; } }
+      width: 25vw;
+      margin: 7.5vh 5vw; } }
 
 footer {
-  padding-top: 5vh;
+  padding-top: 7.5vh;
   font-style: italic; }
-  @media all and (min-width: 750px) {
-    footer {
-      padding-top: 7.5vh; } }
-  footer p + p {
-    margin-top: .25rem; }
+  footer section > * {
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+  footer a {
+    margin-right: 2rem; }
 
 h1,
 h2 {
