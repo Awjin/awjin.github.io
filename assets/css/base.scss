@@ -135,4 +135,8 @@ a {
 img {
     margin: 0;
     width: 100%;
+
+    @media all and (min-width: 500px) and (max-width: 750px) {
+        width: 66%;
+    }
 }
