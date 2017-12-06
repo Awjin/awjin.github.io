@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sass --watch assets/style/style.scss:assets/style/style.css
+sass --watch assets/css/style.scss:assets/css/style.css
 
