@@ -408,7 +408,7 @@ body {
       padding: 20vh 2rem 10vh 2rem; } }
   @media all and (min-width: 1000px) {
     body {
-      font-size: 2vw; } }
+      font-size: 2vmax; } }
 
 body.faded {
   opacity: 0;
