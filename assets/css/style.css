@@ -434,11 +434,11 @@ section.projects {
     font-size: 80%; }
 
 section.contact {
-  margin-top: 5vmax;
+  margin-top: 6vmax;
   font-style: italic; }
   @media all and (min-width: 750px) {
     section.contact {
-      margin-top: 10vmax; } }
+      margin-top: 11vmax; } }
   section.contact a {
     display: inline-block;
     padding-top: .25rem;
