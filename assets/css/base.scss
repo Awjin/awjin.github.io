@@ -7,7 +7,7 @@ body {
 }
 
 body {
-    padding: 5vh 1rem;
+    padding: 5vmax 1rem;
     line-height: 1.4;
     font-family: 'PT Sans', Helvetica, sans-serif;
     font-size: 20px;
@@ -15,7 +15,6 @@ body {
     transition: opacity .4s ease-in;
 
     @media all and (min-width: 1000px) {
-        padding: 10vh 1rem;
         font-size: 2vmax;
     }
 }
@@ -30,17 +29,19 @@ section {
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
-    margin: 5vh auto;
+    margin: 5vmax auto;
 
     @media all and (min-width: 750px) {
-        max-width: 75vw;
+        max-width: 70vw;
     }
 }
 
 section.projects {
+    align-items: flex-start;
+
     @media all and (min-width: 750px) {
-        margin-right: 0;
-        max-width: 66vw;
+        max-width: 50vw;
+        padding-left: 20vw;
     }
 
     h2 {
@@ -54,11 +55,11 @@ section.projects {
 }
 
 section.contact {
-    margin: 10vh auto 0 0;
+    margin-top: 5vmax;
     font-style: italic;
 
     @media all and (min-width: 750px) {
-        margin-top: 20vh;
+        margin-top: 10vmax;
     }
 
     a {
@@ -71,21 +72,16 @@ section.contact {
 section > * {
     box-sizing: border-box;
     width: 100%;
-    padding: 5vmin 2.5vmax;
+    padding: 2.5vmax;
 
     @media all and (min-width: 750px) {
         max-width: 50%;
     }
 }
 
-section.projects > * {
-    @media all and (min-width: 750px) {
-        padding: 5vmin 5vmax;
-    }
-}
-
 section.contact > * {
-    padding: .5rem 2.5vmax;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
 }
 
 h1,
