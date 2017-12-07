@@ -405,6 +405,7 @@ body {
   transition: opacity .4s ease-in; }
   @media all and (min-width: 1000px) {
     body {
+      padding-top: 7.5vh;
       font-size: 2vmax; } }
 
 body.faded {
@@ -419,8 +420,7 @@ section {
   margin: 5vh auto; }
   @media all and (min-width: 750px) {
     section {
-      max-width: 75vw;
-      margin: 10vh auto; } }
+      max-width: 75vw; } }
 
 @media all and (min-width: 750px) {
   section.projects {
