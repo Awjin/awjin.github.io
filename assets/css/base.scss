@@ -7,7 +7,7 @@ body {
 }
 
 body {
-    padding: 2.5vh 1rem 5vh 1rem;
+    padding: 5vh 1rem;
     line-height: 1.4;
     font-family: 'PT Sans', Helvetica, sans-serif;
     font-size: 20px;
@@ -15,7 +15,7 @@ body {
     transition: opacity .4s ease-in;
 
     @media all and (min-width: 1000px) {
-        padding-top: 7.5vh;
+        padding: 10vh 1rem;
         font-size: 2vmax;
     }
 }
@@ -44,6 +44,7 @@ section.projects {
     }
 
     h2 {
+        margin-bottom: .25rem;
         font-size: 100%;
     }
 
@@ -57,32 +58,27 @@ section.contact {
     font-style: italic;
 
     @media all and (min-width: 750px) {
-        margin: 20vh auto 0 0;
+        margin-top: 20vh;
     }
 
     a {
         display: inline-block;
-        padding-top: .5rem;
-        padding-right: 1.5rem;
+        padding-top: .25rem;
+        padding-right: 1rem;
     }
 }
 
 section > * {
     box-sizing: border-box;
     width: 100%;
+    padding: 5vmin 2.5vmax;
 
     @media all and (min-width: 750px) {
         max-width: 50%;
     }
 }
 
-section.intro > * {
-    padding: 7.5vmin 2.5vmax;
-}
-
 section.projects > * {
-    padding: 5vmin 2.5vmax;
-
     @media all and (min-width: 750px) {
         padding: 5vmin 5vmax;
     }
@@ -95,17 +91,16 @@ section.contact > * {
 h1,
 h2 {
     margin-top: 0;
+    margin-bottom: 1.3rem;
     line-height: 1.3;
     font-weight: normal;
 }
 
 h1 {
-    margin-bottom: 1.3rem;
     font-size: 250%;
 }
 
 h2 {
-    margin-bottom: .25rem;
     font-size: 150%;
 }
 
