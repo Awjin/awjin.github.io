@@ -445,12 +445,11 @@ section.contact {
     padding-right: 1rem; }
 
 section > * {
-  box-sizing: border-box;
-  width: 100%;
+  max-width: 100%;
   padding: 2.5vmax; }
   @media all and (min-width: 750px) {
     section > * {
-      max-width: 50%; } }
+      max-width: calc(50% - 5vmax); } }
 
 section.contact > * {
   padding-top: .5rem;
