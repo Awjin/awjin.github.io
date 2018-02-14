@@ -501,13 +501,10 @@ section.projects a:hover img {
   transform: translateY(-5px); }
 
 img {
-  max-width: 80%; }
+  max-width: 90%; }
   @media all and (min-width: 500px) and (max-width: 750px) {
     img {
       max-width: 66%; } }
-  @media all and (min-width: 750px) {
-    img {
-      max-width: 90%; } }
 
 section.projects img {
   margin: .66rem 0 .33rem -1px;

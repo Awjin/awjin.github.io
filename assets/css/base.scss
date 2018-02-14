@@ -146,14 +146,10 @@ section.projects a:hover {
 }
 
 img {
-    max-width: 80%;
+    max-width: 90%;
 
     @media all and (min-width: 500px) and (max-width: 750px) {
         max-width: 66%;
-    }
-
-    @media all and (min-width: 750px) {
-        max-width: 90%;
     }
 }
 
