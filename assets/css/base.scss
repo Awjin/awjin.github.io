@@ -1,7 +1,5 @@
 html,
 body {
-    margin: 0;
-    padding: 0;
     background: #fff;
     color: #000;
 }
@@ -13,18 +11,18 @@ body {
     font-family: 'PT Sans', Helvetica, sans-serif;
     font-size: 18px;
 
-    @media all and (min-width: 750px) {
+    @media all and (min-width: 500px) {
         max-width: 66%
     }
 
     @media all and (min-width: 1000px) {
-        max-width: 60vw;
+        max-width: 55vw;
         font-size: 1.8vw;
     }
 }
 
 header {
-    padding-bottom: 8vh;
+    padding-bottom: 10vh;
     font-size: 150%;
     font-weight: bold;
 
@@ -38,9 +36,9 @@ header {
     align-items: baseline;
 
     a {
-        padding: 0 .66vw;
+        padding: 0 .66vmax;
         opacity: .33;
-        transition: opacity .2s ease;
+        transition: opacity .1s ease;
     }
 
     a.home,
@@ -61,7 +59,7 @@ header {
 
 main {
     box-sizing: border-box;
-    padding: 0 .66vw;
+    padding: 0 .66vmax;
     opacity: 1;
     transition: opacity .5s ease;
 }
@@ -80,18 +78,32 @@ section {
 
 section > * {
     width: 100%;
-    margin-bottom: 4vh;
+    margin-bottom: 54.87525px;
 
     @media all and (min-width: 750px) {
         max-width: 44%;
     }
+
+    @media all and (min-width: 1000px) {
+        margin-bottom: 5.487525vw;
+    }
+}
+
+h1,
+h2,
+p {
+    margin: 0;
 }
 
 h1,
 h2 {
-    margin-top: 0;
+    margin-bottom: 37.845px;
     line-height: 1.305;
     font-weight: normal;
+
+    @media all and (min-width: 1000px) {
+        margin-bottom: 3.7845vw;
+    }
 }
 
 h1 {
@@ -104,16 +116,20 @@ h2 {
 
 h3 {
     margin: 0;
-    font-weight: normal;
+    font-size: 115%;
+    font-weight: bold;
 }
 
-h2 + p,
 p + p {
-    margin-top: 3vw;
+    margin-top: 37.845px;
+
+    @media all and (min-width: 1000px) {
+        margin-top: 3.7845vw;
+    }
 }
 
-section.projects p {
-    margin-top: 0;
+.small-font {
+    font-size: 90%;
 }
 
 a {
@@ -127,6 +143,18 @@ a {
     }
 }
 
+section.projects a {
+    display: block;
+}
+
+section.projects a:hover,
+section.projects a:focus,
+section.projects a:active, {
+    img {
+        transform: translateY(-5px);
+    }
+}
+
 img {
     max-width: 80%;
 
@@ -137,4 +165,11 @@ img {
     @media all and (min-width: 750px) {
         max-width: 90%;
     }
+}
+
+section.projects img {
+    margin: .66rem 0 .33rem -1px;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    transition: transform .2s ease;
 }
