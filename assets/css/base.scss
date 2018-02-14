@@ -24,7 +24,6 @@ body {
 header {
     padding-bottom: 10vh;
     font-size: 150%;
-    font-weight: bold;
 
     @media all and (min-width: 500px) {
         font-size: 200%;
@@ -36,6 +35,7 @@ header {
     align-items: baseline;
 
     a {
+        font-weight: bold;
         padding: 0 .66vmax;
         opacity: .33;
         transition: opacity .1s ease;
@@ -90,13 +90,11 @@ section > * {
 }
 
 h1,
-h2,
 p {
     margin: 0;
 }
 
-h1,
-h2 {
+h1 {
     margin-bottom: 37.845px;
     line-height: 1.305;
     font-weight: normal;
@@ -107,14 +105,10 @@ h2 {
 }
 
 h1 {
-    font-size: 200%;
-}
-
-h2 {
     font-size: 150%;
 }
 
-h3 {
+h2 {
     margin: 0;
     font-size: 115%;
     font-weight: bold;
@@ -136,9 +130,7 @@ a {
     text-decoration: none;
     color: #05d;
 
-    &:hover,
-    &:focus,
-    &:active {
+    &:hover {
         text-decoration: underline;
     }
 }
@@ -147,9 +139,7 @@ section.projects a {
     display: block;
 }
 
-section.projects a:hover,
-section.projects a:focus,
-section.projects a:active, {
+section.projects a:hover {
     img {
         transform: translateY(-5px);
     }
