@@ -23,7 +23,7 @@
     </nav>
   </header>
 
-  <main class="faded">
+  <main>
     <section>
       <div>
         <h1>Creative Coder<br>&amp; CSS Addict</h1>
@@ -52,6 +52,8 @@
     </section>
   </main>
 
-  <script>window.onload = () => document.querySelector('main').classList.remove('faded')</script>
+  <script>
+    window.onload = () => document.querySelector('main').classList.add('loaded')
+  </script>
 </body>
 </html>

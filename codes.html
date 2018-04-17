@@ -23,7 +23,7 @@
     </nav>
   </header>
 
-  <main class="faded">
+  <main>
     <h1>The Web is the Platform</h1>
 
     <section class="projects">
@@ -69,6 +69,8 @@
     </section>
   </main>
 
-  <script>window.onload = () => document.querySelector('main').classList.remove('faded')</script>
+  <script>
+    window.onload = () => document.querySelector('main').classList.add('loaded')
+  </script>
 </body>
 </html>

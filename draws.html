@@ -23,7 +23,7 @@
     </nav>
   </header>
 
-  <main class="faded">
+  <main>
     <h1>Turning Ideas into Lines</h1>
 
     <img alt="Magical London" src="assets/images/draws/london.png" style="margin-bottom: 1rem;" />
@@ -40,6 +40,8 @@
     <br><br>
   </main>
 
-  <script>window.onload = () => document.querySelector('main').classList.remove('faded')</script>
+  <script>
+    window.onload = () => document.querySelector('main').classList.add('loaded')
+  </script>
 </body>
 </html>
