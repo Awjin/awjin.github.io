@@ -312,7 +312,7 @@ body {
   @media all and (min-width: 1000px) {
     body {
       font-size: 1.8vw;
-      max-width: 55vw; } }
+      max-width: 60vw; } }
 
 header {
   font-size: 150%;
