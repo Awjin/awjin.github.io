@@ -396,6 +396,7 @@ main {
   box-sizing: border-box;
   opacity: 0;
   padding: 0 0.66vmax;
+  transition: opacity 500ms cubic-bezier(0, 0, 0.2, 1);
 }
 main.loaded {
   opacity: 1;
