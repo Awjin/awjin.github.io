@@ -345,7 +345,7 @@ body {
 
 body {
   font: 18px/1.4 "PT Sans", Helvetica, sans-serif;
-  margin: 6vh auto 12vh auto;
+  margin: 6vh auto 10vh auto;
   max-width: 90%;
 }
 @media all and (min-width: 500px) {
