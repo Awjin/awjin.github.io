@@ -393,6 +393,9 @@ p + p {
 .small-font {
   font-size: 90%; }
 
+.email-callout {
+  margin-top: .5em; }
+
 a {
   color: #05d;
   text-decoration: none; }
