@@ -1,0 +1,28 @@
+$breakpoint: 1000px;
+$font-size-static: 18px;
+$font-size-responsive: 1.8vmax;
+$line-height: 1.45;
+$whitespace: 1rem * $line-height;
+
+$scale: (
+  'font-size': (
+    'coefficient': 1,
+    'ratio': 1.3,
+  ),
+  'whitespace': (
+    'coefficient': 1.66667,
+    'ratio': 1.66667,
+  ),
+);
+
+$font-stack: (
+  'headings': unquote('PT Serif, Georgia, serif'),
+  'body': unquote('PT Sans, Helvetica, sans-serif'),
+  'mono': unquote('Roboto Mono, Andale Mono, Lucida Console, monospace'),
+);
+
+$color: (
+  'normal': rgba(0, 0, 0, 0.8),
+  'light': rgba(0, 0, 0, 0.5),
+  'action': rgba(17, 68, 238, 0.95),
+);

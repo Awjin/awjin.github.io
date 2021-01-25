@@ -1,0 +1,51 @@
+@use 'sass:map';
+@use 'base';
+@use 'just-type';
+@use 'syntax';
+
+html,
+body {
+  background: #fff5eb;
+}
+
+.just-type {
+  @include just-type.typography;
+  @include syntax.highlight(map.get(just-type.$color, 'light'));
+
+  article {
+    padding-bottom: 3em;
+  }
+
+  .subtitle {
+    margin-top: 0;
+    margin-bottom: 3 * just-type.$whitespace;
+    opacity: 0.6;
+  }
+
+  .subtitle + h2 {
+    margin-top: 0;
+  }
+
+  pre,
+  img {
+    border-radius: 1em;
+  }
+
+  img {
+    border: 1px solid map.get(just-type.$color, 'light');
+    max-height: 90vh;
+  }
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: 1fr 6em;
+  grid-row-gap: 1em;
+  align-items: baseline;
+  color: rgba(0, 0, 0, 0.5);
+
+  :nth-child(even) {
+    text-align: right;
+    font-size: 85%;
+  }
+}

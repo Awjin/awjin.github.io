@@ -1,0 +1,15 @@
+---
+---
+
+{% include top.html %}
+  <div class="posts">
+    {% for post in site.posts  %}
+      <a href="{{ post.url | relative_url }}">
+        {{ post.title | escape }}
+      </a>
+      <time datetime="{{ post.date | date_to_xmlschema }}">
+        {{ post.date | date: site.date_format }}
+      </time>
+    {% endfor %}
+  </div>
+{% include bottom.html %}
