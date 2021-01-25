@@ -1,0 +1,8 @@
+#!/bin/bash
+
+sass \
+  --watch \
+  --style compressed \
+  --no-source-map \
+  src/styles/page.scss:docs/styles/page.css \
+  src/styles/post.scss:docs/styles/post.css

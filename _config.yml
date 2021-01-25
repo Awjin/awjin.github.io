@@ -1,0 +1,31 @@
+# Meta
+title: Awjin Ahn
+description: "It's really me!"
+lang: en
+date_format: '%b %-d, %Y'
+
+# Format
+defaults:
+  - scope:
+      path:
+    values:
+      layout: page
+  - scope:
+      path: _post
+      type: posts
+    values:
+      layout: post
+      header_value: words
+markdown: kramdown
+highlighter: rouge
+
+# Build
+source: src
+destination: docs
+exclude:
+  - styles
+keep_files:
+  - styles
+liquid:
+  error_mode: strict
+strict_front_matter: true

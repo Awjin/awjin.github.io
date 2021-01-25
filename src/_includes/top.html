@@ -1,31 +1,48 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+  {% if page.header_value == "words" %}
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "styles/post.css" | relative_url }}">
+  {% else %}
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "styles/page.css" | relative_url }}">
+  {% endif %}
+
+  <link rel="shortcut icon" href="{{ "assets/favicon.png" | relative_url }}">
   <title>{% if page.title %} {{ page.title | escape }} {% else %} {{ site.title | escape }} {% endif %}</title>
   <meta name="description" content="{{ site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <meta name="google-site-verification" content="6-a2XOzmHJ6cYdK9CFTu8i2G703K7Nr1oSxIEY-nd98">
-
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ "styles/words.css" | relative_url }}">
-
-  <link rel="shortcut icon" href="{{ "assets/favicon.png" | relative_url }}">
 </head>
 
 <body>
   <header>
     <nav>
-      <a href="{{ "../" | relative_url }}">
+      <a href="{{ "/" | relative_url }}">
         <img src="{{ "assets/face.png" | relative_url }}" alt="home"/>
       </a>
-      <a href="{{ "../projects" | relative_url }}">Projects</a>
+
+      <a
+        {% if page.header_value == "projects" %} class="current"{% endif %}
+        href="{{ "projects" | relative_url }}">
+        Projects
+      </a>
+
+      <a
+        {% if page.header_value == "words" %} class="current"{% endif %}
+        href="{{ "words" | relative_url }}">
+        Words
+      </a>
+
+      <a href="https://instagram.com/awjypodgy">Pics</a>
+
       <a href="https://github.com/awjin">Repos</a>
-      <a class="current" href="/words/">Words</a>
-      <a href="https://instagram.com/awjypodgy/">Pics</a>
     </nav>
   </header>
 
-  <main class="just-type">
+  <main>

@@ -1,55 +1,71 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/post.css">
+  
+
+  <link rel="shortcut icon" href="/assets/favicon.png">
   <title> Redesign: Airplane Boarding Pass </title>
   <meta name="description" content="It&#39;s really me!">
   <meta name="google-site-verification" content="6-a2XOzmHJ6cYdK9CFTu8i2G703K7Nr1oSxIEY-nd98">
-
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/words/styles/words.css">
-
-  <link rel="shortcut icon" href="/words/assets/favicon.png">
 </head>
 
 <body>
   <header>
     <nav>
       <a href="/">
-        <img src="/words/assets/face.png" alt="home"/>
+        <img src="/assets/face.png" alt="home"/>
       </a>
-      <a href="/projects">Projects</a>
+
+      <a
+        
+        href="/projects">
+        Projects
+      </a>
+
+      <a
+         class="current"
+        href="/words">
+        Words
+      </a>
+
+      <a href="https://instagram.com/awjypodgy">Pics</a>
+
       <a href="https://github.com/awjin">Repos</a>
-      <a class="current" href="/words/">Words</a>
-      <a href="https://instagram.com/awjypodgy/">Pics</a>
     </nav>
   </header>
 
-  <main class="just-type">
+  <main>
 
   <article>
     <h1>Redesign: Airplane Boarding Pass</h1>
+
     <p class="subtitle">
       <time datetime="2018-01-22T00:00:00-06:00">
         Jan 22, 2018
       </time>
-      &nbsp;~&nbsp;
+      &nbsp;&nbsp;
       <span>
-        2 min read
+        ~ 2 min read
       </span>
     </p>
+
     <p>Needless to say, boarding passes have bad UX. So bad, in fact, that <a href="http://passfail.squarespace.com/">many</a> <a href="http://blog.timoni.org/post/318322031/a-practical-boarding-pass-redesign">others</a> <a href="https://uxplanet.org/while-i-was-redesigning-a-boarding-pass-paper-got-old-eda92055dd29">have</a> <a href="https://medium.com/@adamgf/boarding-pass-redesign-c72084d7793e">redesigned</a> these awful things in their free time.</p>
 
 <p>I figured I’d add another redesign to the pile, and provide the rationale behind how I edited this:</p>
 
-<p><img src="/words/assets/posts/2018-01-22-redesign-airplane-boarding-pass/1a.png" alt="1" /></p>
+<p><img src="/assets/posts/2018-01-22-redesign-airplane-boarding-pass/1a.png" alt="1" /></p>
 
 <p>into this:</p>
 
-<p><img src="/words/assets/posts/2018-01-22-redesign-airplane-boarding-pass/1b.png" alt="1" /></p>
+<p><img src="/assets/posts/2018-01-22-redesign-airplane-boarding-pass/1b.png" alt="1" /></p>
 
 <h2 id="considerations">Considerations</h2>
 
@@ -72,31 +88,31 @@ It should be the same size as the original, and should use an equal or lesser am
 
 <p>Delete the unnecessary.</p>
 
-<p><img src="/words/assets/posts/2018-01-22-redesign-airplane-boarding-pass/2a.png" alt="1" /></p>
+<p><img src="/assets/posts/2018-01-22-redesign-airplane-boarding-pass/2a.png" alt="1" /></p>
 
 <p>The result:</p>
 
-<p><img src="/words/assets/posts/2018-01-22-redesign-airplane-boarding-pass/2b.png" alt="1" /></p>
+<p><img src="/assets/posts/2018-01-22-redesign-airplane-boarding-pass/2b.png" alt="1" /></p>
 
 <h2 id="consistency">Consistency</h2>
 
 <p>Most of the items are laid out consistently: small label on top, with the value in large font underneath. The highlighted items do not follow this information hierarchy:</p>
 
-<p><img src="/words/assets/posts/2018-01-22-redesign-airplane-boarding-pass/3a.png" alt="1" /></p>
+<p><img src="/assets/posts/2018-01-22-redesign-airplane-boarding-pass/3a.png" alt="1" /></p>
 
 <p>Let’s make them consistent:</p>
 
-<p><img src="/words/assets/posts/2018-01-22-redesign-airplane-boarding-pass/3b.png" alt="1" /></p>
+<p><img src="/assets/posts/2018-01-22-redesign-airplane-boarding-pass/3b.png" alt="1" /></p>
 
 <h2 id="anchoring">Anchoring</h2>
 
 <p>The highlighted items are codes for gate agents. I’d guess that they are triangulated for max separation. Perhaps, through training, agents learn to examine the left side for code #1, the top right corner for code #2, and the bottom right corner for code #3.</p>
 
-<p><img src="/words/assets/posts/2018-01-22-redesign-airplane-boarding-pass/4a.png" alt="1" /></p>
+<p><img src="/assets/posts/2018-01-22-redesign-airplane-boarding-pass/4a.png" alt="1" /></p>
 
 <p>Interesting approach, but we can do better. Let’s take strong visual elements that already exist—the barcodes—and anchor codes to them. Now, instead of searching arbitrarily, the agent can use the barcodes as landmarks to locate codes.</p>
 
-<p><img src="/words/assets/posts/2018-01-22-redesign-airplane-boarding-pass/4b.png" alt="1" /></p>
+<p><img src="/assets/posts/2018-01-22-redesign-airplane-boarding-pass/4b.png" alt="1" /></p>
 
 <h2 id="chunking">Chunking</h2>
 
@@ -104,20 +120,21 @@ It should be the same size as the original, and should use an equal or lesser am
 
 <p>All elements should be chunked into those stages:</p>
 
-<p><img src="/words/assets/posts/2018-01-22-redesign-airplane-boarding-pass/5a.png" alt="1" /></p>
+<p><img src="/assets/posts/2018-01-22-redesign-airplane-boarding-pass/5a.png" alt="1" /></p>
 
 <p>Let’s place the first stage on the left and the second on the right,  punctuating with whitespace:</p>
 
-<p><img src="/words/assets/posts/2018-01-22-redesign-airplane-boarding-pass/5b.png" alt="1" /></p>
+<p><img src="/assets/posts/2018-01-22-redesign-airplane-boarding-pass/5b.png" alt="1" /></p>
 
 <h2 id="the-product">The Product</h2>
 
-<p><img src="/words/assets/posts/2018-01-22-redesign-airplane-boarding-pass/1b.png" alt="1" /></p>
+<p><img src="/assets/posts/2018-01-22-redesign-airplane-boarding-pass/1b.png" alt="1" /></p>
 
 <p>Consistent, scannable, and economical, with good usability for all users.</p>
 
   </article>
   </main>
+
   <script>
     window.onload = () => document.querySelector('main').classList.add('loaded')
   </script>

@@ -1,45 +1,23 @@
 @use 'normalize';
+@use 'just-type';
 
-$whitespace: 1.5em;
 $transition-fast: 50ms cubic-bezier(0, 0, 0.2, 1);
 $transition-slow: 150ms cubic-bezier(0, 0, 0.2, 1) 250ms;
 
-
-@mixin breakpoint-small {
-  @media all and (min-width: 500px) {
-    @content;
-  }
-}
-
-@mixin breakpoint-medium {
-  @media all and (min-width: 1000px) {
-    @content;
-  }
-}
-
 html {
-  padding: (0.5 * $whitespace) $whitespace ($whitespace * 6) $whitespace;
-  background: #fff;
-  color: #000;
-  font-family: 'PT Sans', Helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  @include just-type.typography;
+  padding: just-type.$whitespace just-type.$whitespace (7 * just-type.$whitespace) just-type.$whitespace;
 }
 
 body {
   margin: 0 auto;
-  max-width: 33em;
-
-  @include breakpoint-medium {
-    font-size: 1.6vmax;
-  }
+  max-width: 33rem;
 }
 
 header {
-  padding-bottom: 2 * $whitespace;
-  font-family: 'PT Sans', Helvetica, sans-serif;
-  font-weight: 700;
+  padding-bottom: 3 * just-type.$whitespace;
   font-size: 110%;
+  font-weight: bold;
   letter-spacing: 0.065em;
 
   nav {
@@ -49,21 +27,9 @@ header {
 
   a {
     display: block;
-    padding: 0.4 * $whitespace;
+    padding: 0.6 * just-type.$whitespace;
     opacity: 0.6;
     transition: transform $transition-fast;
-
-    &:first-child {
-      display: flex;
-      align-items: center;
-      margin-left: -0.5 * $whitespace;
-      margin-right: auto;
-      opacity: 1;
-
-      img {
-        max-width: 2.5em;
-      }
-    }
 
     &.current {
       opacity: 1;
@@ -74,116 +40,40 @@ header {
     &:focus {
       text-decoration: none;
       opacity: 1;
-      transform: rotate(-8deg) scale(1.1);
+      transform: scale(1.125) rotate(2deg) translate3d(0.25rem, -0.1rem, 0);
+    }
+
+    &:first-child {
+      margin-right: auto;
+      margin-left: -1 * just-type.$whitespace;
+      opacity: 1;
+
+      img {
+        max-width: 2.5em;
+        margin: 0;
+      }
+
+      &:active,
+      &:hover,
+      &:focus {
+        transform: scale(1.1) rotate(-4deg) translate3d(-0.25rem, -0.1rem, 0);
+      }
     }
   }
 }
 
 main {
   opacity: 0;
-  transform: translate3d(0, 0.5vmax, 0);
-  transition: transform $transition-slow,
-              opacity $transition-slow;
+  transform: translate3d(0, 1vh, 0);
+  transition: transform $transition-slow, opacity $transition-slow;
 
   &.loaded {
-    transform: none;
     opacity: 1;
+    transform: none;
   }
 
-  .columns {
-    display: grid;
-    grid-template-columns: 1fr;
-    column-gap: $whitespace;
-
-    @include breakpoint-small {
-      grid-template-columns: 1fr 1fr;
-    }
+  img {
+    max-width: 90%;
+    max-height: 90vh;
   }
-}
-
-.projects {
-  line-height: 1.4;
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: $whitespace;
-  column-gap: 2 * $whitespace;
-
-  @include breakpoint-small {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  a {
-    display: block;
-    outline: none;
-
-    img {
-      margin-bottom: 0.33333 * $whitespace;
-      border: 1px solid #aaa;
-      border-radius: 0.5em;
-      transition: border-color $transition-fast,
-                  transform $transition-fast;
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-      img {
-        border-color: #777;
-        transform: rotate(2deg) translate3d(0.5em, -0.1em, 0);
-      }
-
-      h2 {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  a + p {
-    margin-top: -1 * $whitespace;
-  }
-}
-
-h1,
-h2,
-p {
-  margin: 0;
-  margin-bottom: $whitespace;
-  font-weight: 400;
-}
-
-h1 {
-  line-height: 1;
-  font-size: 170%;
-}
-
-h2 {
-  font-size: 115%;
-}
-
-p + ul {
-  margin-top: -0.5 * $whitespace;
-}
-
-ul {
-  max-width: 85%;
-
-  li {
-    margin-bottom: 0.5 * $whitespace;
-    margin-left: 0.25 * $whitespace;
-    padding-left: 0.125 * $whitespace;
-  }
-}
-
-a {
-  color: #14e;
-  text-decoration: none;
-  transition: transition-fast;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-img {
-  max-width: 90%;
 }

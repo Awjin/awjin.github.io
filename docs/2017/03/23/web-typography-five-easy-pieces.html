@@ -1,57 +1,73 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/post.css">
+  
+
+  <link rel="shortcut icon" href="/assets/favicon.png">
   <title> Web Typography: Five Easy Pieces </title>
   <meta name="description" content="It&#39;s really me!">
   <meta name="google-site-verification" content="6-a2XOzmHJ6cYdK9CFTu8i2G703K7Nr1oSxIEY-nd98">
-
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/words/styles/words.css">
-
-  <link rel="shortcut icon" href="/words/assets/favicon.png">
 </head>
 
 <body>
   <header>
     <nav>
       <a href="/">
-        <img src="/words/assets/face.png" alt="home"/>
+        <img src="/assets/face.png" alt="home"/>
       </a>
-      <a href="/projects">Projects</a>
+
+      <a
+        
+        href="/projects">
+        Projects
+      </a>
+
+      <a
+         class="current"
+        href="/words">
+        Words
+      </a>
+
+      <a href="https://instagram.com/awjypodgy">Pics</a>
+
       <a href="https://github.com/awjin">Repos</a>
-      <a class="current" href="/words/">Words</a>
-      <a href="https://instagram.com/awjypodgy/">Pics</a>
     </nav>
   </header>
 
-  <main class="just-type">
+  <main>
 
   <article>
     <h1>Web Typography: Five Easy Pieces</h1>
+
     <p class="subtitle">
       <time datetime="2017-03-23T00:00:00-05:00">
         Mar 23, 2017
       </time>
-      &nbsp;~&nbsp;
+      &nbsp;&nbsp;
       <span>
-        2 min read
+        ~ 2 min read
       </span>
     </p>
+
     <h2 id="1-font-size">#1. Font Size</h2>
 
 <p>If they can’t read it, they won’t. 16px is the minimum. Use it for auxiliary copy, such as captions and buttons. 18px is a good standard, comfortable for extended reading.</p>
 
-<p>Don’t be afraid to go larger. This text starts at 18px and scales up with screen size.</p>
+<p>Don’t be afraid to go larger. This text starts at 16px and scales up with screen size.</p>
 
 <h2 id="2-line-width">#2. Line Width</h2>
 
 <p>Approximately 75 characters per line (including spaces) lends a natural reading pace. That’s about 30 times the <code class="language-plaintext highlighter-rouge">font-size</code>. Place text in the center of the screen for proper ergonomics.</p>
 
-<p>This text has a max width of 33em.</p>
+<p>This text has a max width of 33rem.</p>
 
 <h2 id="3-line-height">#3. Line Height</h2>
 
@@ -59,14 +75,14 @@
 
 <p>This text has a line height of 1.45.</p>
 
-<p><img src="/words/assets/posts/2017-03-23-web-typography-five-easy-pieces/typography.jpg" alt="typography" /></p>
+<p><img src="/assets/posts/2017-03-23-web-typography-five-easy-pieces/typography.jpg" alt="typography" /></p>
 
 <h2 id="4-whitespace">#4. Whitespace</h2>
 
-<p>Whitespace is punctuation, vital for timing and airing out long text. Set vertical breaks to the height of one line.</p>
+<p>Whitespace is punctuation, vital for timing and airing out long text. Set vertical breaks to about the height of one line.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$line-height: 1.45;
-$whitespace: 1em * $line-height;
+$whitespace: 1rem * $line-height;
 
 h1, h2, h3,
 p, ol, ul {
@@ -106,6 +122,7 @@ p, ol, ul {
 
   </article>
   </main>
+
   <script>
     window.onload = () => document.querySelector('main').classList.add('loaded')
   </script>

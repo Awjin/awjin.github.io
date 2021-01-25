@@ -1,5 +1,5 @@
 ---
-title: "Apple and the 1%"
+title: 'Apple and the 1%'
 ---
 
 *This Pencil isn't working.*

@@ -1,15 +1,17 @@
 {% include top.html %}
   <article>
     <h1>{{ page.title | escape }}</h1>
+
     <p class="subtitle">
       <time datetime="{{ page.date | date_to_xmlschema }}">
         {{ page.date | date: site.date_format }}
       </time>
-      &nbsp;~&nbsp;
+      &nbsp;&nbsp;
       <span>
-        {{ page.content | number_of_words | divided_by: 300 | plus: 1 }} min read
+        ~ {{ page.content | number_of_words | divided_by: 300 | plus: 1 }} min read
       </span>
     </p>
+
     {{ content }}
   </article>
 {% include bottom.html %}

@@ -1,18 +1,18 @@
 ---
-title: "Web Typography: Five Easy Pieces"
+title: 'Web Typography: Five Easy Pieces'
 ---
 
 ## #1. Font Size
 
 If they can't read it, they won't. 16px is the minimum. Use it for auxiliary copy, such as captions and buttons. 18px is a good standard, comfortable for extended reading.
 
-Don't be afraid to go larger. This text starts at 18px and scales up with screen size.
+Don't be afraid to go larger. This text starts at 16px and scales up with screen size.
 
 ## #2. Line Width
 
 Approximately 75 characters per line (including spaces) lends a natural reading pace. That’s about 30 times the `font-size`. Place text in the center of the screen for proper ergonomics.
 
-This text has a max width of 33em.
+This text has a max width of 33rem.
 
 ## #3. Line Height
 
@@ -24,11 +24,11 @@ This text has a line height of 1.45.
 
 ## #4. Whitespace
 
-Whitespace is punctuation, vital for timing and airing out long text. Set vertical breaks to the height of one line.
+Whitespace is punctuation, vital for timing and airing out long text. Set vertical breaks to about the height of one line.
 
 ```
 $line-height: 1.45;
-$whitespace: 1em * $line-height;
+$whitespace: 1rem * $line-height;
 
 h1, h2, h3,
 p, ol, ul {

@@ -1,5 +1,5 @@
 ---
-title: "Redesign: Artflow Settings Menu"
+title: 'Redesign: Artflow Settings Menu'
 ---
 
 [ArtFlow](http://artflowstudio.com/) is my favorite drawing tool. It's got a lot of useful features, with a fully-featured settings menu to match. Let's see if we can redesign the menu for better usability.

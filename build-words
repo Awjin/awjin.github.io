@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# Setup from scratch:
-#   brew install rbenv
-#   rbenv install
-#   gem install bundler jekyll
-jekyll serve --trace --source src --destination words

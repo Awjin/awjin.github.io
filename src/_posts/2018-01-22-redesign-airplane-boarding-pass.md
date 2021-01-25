@@ -1,5 +1,5 @@
 ---
-title: "Redesign: Airplane Boarding Pass"
+title: 'Redesign: Airplane Boarding Pass'
 ---
 
 Needless to say, boarding passes have bad UX. So bad, in fact, that [many](http://passfail.squarespace.com/) [others](http://blog.timoni.org/post/318322031/a-practical-boarding-pass-redesign) [have](https://uxplanet.org/while-i-was-redesigning-a-boarding-pass-paper-got-old-eda92055dd29) [redesigned](https://medium.com/@adamgf/boarding-pass-redesign-c72084d7793e) these awful things in their free time.
