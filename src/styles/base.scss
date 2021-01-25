@@ -1,9 +1,9 @@
 @use 'normalize';
 
 $whitespace: 1.5em;
-$transition-style: cubic-bezier(0, 0, 0.2, 1);
-$transition-fast: 0.1s $transition-style;
-$transition-slow: 1s $transition-style;
+$transition-fast: 50ms cubic-bezier(0, 0, 0.2, 1);
+$transition-slow: 150ms cubic-bezier(0, 0, 0.2, 1) 250ms;
+
 
 @mixin breakpoint-small {
   @media all and (min-width: 500px) {
@@ -51,6 +51,7 @@ header {
     display: block;
     padding: 0.4 * $whitespace;
     opacity: 0.6;
+    transition: transform $transition-fast;
 
     &:first-child {
       display: flex;
@@ -80,9 +81,12 @@ header {
 
 main {
   opacity: 0;
-  transition: opacity $transition-slow;
+  transform: translate3d(0, 0.5vmax, 0);
+  transition: transform $transition-slow,
+              opacity $transition-slow;
 
   &.loaded {
+    transform: none;
     opacity: 1;
   }
 
@@ -113,10 +117,11 @@ main {
     outline: none;
 
     img {
-      transition: $transition-fast;
       margin-bottom: 0.33333 * $whitespace;
       border: 1px solid #aaa;
       border-radius: 0.5em;
+      transition: border-color $transition-fast,
+                  transform $transition-fast;
     }
 
     &:hover,
@@ -124,7 +129,7 @@ main {
     &:active {
       img {
         border-color: #777;
-        transform: rotate(2deg) translate(0.5em, -0.1em);
+        transform: rotate(2deg) translate3d(0.5em, -0.1em, 0);
       }
 
       h2 {
