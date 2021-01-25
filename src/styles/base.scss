@@ -3,7 +3,7 @@
 $whitespace: 1.5em;
 $transition-style: cubic-bezier(0, 0, 0.2, 1);
 $transition-fast: 0.1s $transition-style;
-$transition-slow: 0.6s $transition-style;
+$transition-slow: 1s $transition-style;
 
 @mixin breakpoint-small {
   @media all and (min-width: 500px) {

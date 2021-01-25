@@ -1,5 +1,6 @@
 title: "Words"
 description: "It's really me!"
+baseurl: "/words"
 date_format: "%b %-d, %Y"
 lang: "en"
 markdown: kramdown
