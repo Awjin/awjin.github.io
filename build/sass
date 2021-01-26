@@ -4,5 +4,5 @@ sass \
   --watch \
   --style compressed \
   --no-source-map \
-  src/styles/page.scss:docs/styles/page.css \
-  src/styles/post.scss:docs/styles/post.css
+  src/styles/page.scss:dist/styles/page.css \
+  src/styles/post.scss:dist/styles/post.css
