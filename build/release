@@ -8,3 +8,5 @@ rm -rf trash
 touch .nojekyll
 git add .
 git commit -m "New release"
+git push
+git checkout master
