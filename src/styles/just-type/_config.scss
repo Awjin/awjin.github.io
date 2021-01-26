@@ -1,0 +1,134 @@
+@use 'sass:map';
+
+// The min breakpoint at which font-size will switch from static to responsive
+// units. The responsive font-size should scale with the viewport size, to
+// support infinitely large viewports.
+$-breakpoint: null;
+@function breakpoint() {
+  @return $-breakpoint or 1000px;
+}
+
+// Base font-size of body text, in static units (px, etc). This is auto-scaled
+// smaller for captions, code, etc.
+$-font-size-static: null;
+@function font-size-static() {
+  @return $-font-size-static or 16px;
+}
+
+// Base font-size of body text, in responsive units (vw, etc). This is
+// auto-scaled smaller for captions, code, etc.
+$-font-size-responsive: null;
+@function font-size-responsive() {
+  @return $-font-size-responsive or 1.6vw;
+}
+
+// Line-height of body text. This is auto-scaled smaller for headings.
+$-line-height: null;
+@function line-height() {
+  @return $-line-height or 1.45;
+}
+
+// The size of line breaks.
+$-whitespace: null;
+@function whitespace() {
+  @return $-whitespace or 0.75rem * line-height();
+}
+
+// The exponential rate at which headings scale up in size. Initializes h4's
+// font-size to the body's font-size * `base`. Then, sets h3's font-size to
+// h4's font-size * `ratio`, and so on.
+$-font-size-scale: null;
+@function font-size-scale($key) {
+  @if $-font-size-scale {
+    @return map.get($-font-size-scale, $key);
+  } @else {
+    @return map.get((
+      'base': 1,
+      'ratio': 1.33333,
+    ), $key);
+  }
+}
+
+// The exponential rate at which the whitespace above headings scale up in size.
+// Initializes h4's whitespace to the body's whitespace * `base`. Then, sets
+// h3's whitespace to h4's whitespace * `ratio`, and so on.
+$-whitespace-scale: null;
+@function whitespace-scale($key) {
+  @if $-whitespace-scale {
+    @return map.get($-whitespace-scale, $key);
+  } @else {
+    @return map.get((
+      'base': 1.5,
+      'ratio': 1.5,
+    ), $key);
+  }
+}
+
+// The font-stack.
+$-font-stack: null;
+@function font-stack($key) {
+  @if $-font-stack {
+    @return map.get($-font-stack, $key);
+  } @else {
+    @return map.get((
+      'headings': (Georgia, serif),
+      'body': (Helvetica, sans-serif),
+      'mono': ('Andale Mono', monospace),
+    ), $key);
+  }
+}
+
+// The text colors.
+$-color: null;
+@function color($key) {
+  @if $-color {
+    @return map.get($-color, $key);
+  } @else {
+    @return map.get((
+      'normal': rgba(0, 0, 0, 0.95),
+      'light': rgba(0, 0, 0, 0.6),
+      'action': rgba(17, 68, 228, 0.95),
+    ), $key);
+  }
+}
+
+// Overrides default configuration values.
+@mixin configure(
+  $breakpoint: null,
+  $font-size-static: null,
+  $font-size-responsive: null,
+  $line-height: null,
+  $whitespace: null,
+  $font-size-scale: null,
+  $whitespace-scale: null,
+  $font-stack: null,
+  $color: null,
+) {
+  @if $breakpoint {
+    $-breakpoint: $breakpoint !global;
+  }
+  @if $font-size-static {
+    $-font-size-static: $font-size-static !global;
+  }
+  @if $font-size-responsive {
+    $-font-size-responsive: $font-size-responsive !global;
+  }
+  @if $line-height {
+    $-line-height: $line-height !global;
+  }
+  @if $whitespace {
+    $-whitespace: $whitespace !global;
+  }
+  @if $font-size-scale {
+    $-font-size-scale: $font-size-scale !global;
+  }
+  @if $whitespace-scale {
+    $-whitespace-scale: $whitespace-scale !global;
+  }
+  @if $font-stack {
+    $-font-stack: $font-stack !global;
+  }
+  @if $color {
+    $-color: $color !global;
+  }
+}

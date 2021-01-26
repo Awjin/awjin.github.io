@@ -5,8 +5,13 @@ $transition-fast: 50ms cubic-bezier(0, 0, 0.2, 1);
 $transition-slow: 150ms cubic-bezier(0, 0, 0.2, 1) 250ms;
 
 html {
+  @include just-type.configure($font-stack: (
+    'headings': ('PT Serif', serif),
+    'body': ('PT Sans', sans-serif),
+    'mono': ('Roboto Mono', monospace),
+  ));
   @include just-type.typography;
-  padding: just-type.$whitespace just-type.$whitespace (7 * just-type.$whitespace) just-type.$whitespace;
+  padding: just-type.whitespace() just-type.whitespace() (7 * just-type.whitespace()) just-type.whitespace();
 }
 
 body {
@@ -15,19 +20,27 @@ body {
 }
 
 header {
-  padding-bottom: 3 * just-type.$whitespace;
+  padding-bottom: 3 * just-type.whitespace();
   font-size: 110%;
   font-weight: bold;
   letter-spacing: 0.065em;
+  user-select: none;
 
   nav {
     display: flex;
     align-items: center;
+    margin-right: -0.6 * just-type.whitespace();
+  }
+
+  .separator {
+    padding: 0 (0.45 * just-type.whitespace());
+    color: just-type.color('action');
+    opacity: 0.6;
   }
 
   a {
     display: block;
-    padding: 0.6 * just-type.$whitespace;
+    padding: 0.6 * just-type.whitespace();
     opacity: 0.6;
     transition: transform $transition-fast;
 
@@ -45,11 +58,11 @@ header {
 
     &:first-child {
       margin-right: auto;
-      margin-left: -1 * just-type.$whitespace;
+      margin-left: -1 * just-type.whitespace();
       opacity: 1;
 
       img {
-        max-width: 2.5em;
+        width: 2.5em;
         margin: 0;
       }
 

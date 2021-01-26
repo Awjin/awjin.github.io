@@ -1,2 +1,23 @@
 @forward 'config';
-@forward 'typography' show typography;
+@forward 'typography';
+@forward 'utils';
+
+// Provides the just-type `typography` mixin, which generates typographic styles
+// based on the values of `config`.
+//
+// If you want to override the default `config` values, configure the module
+// first before calling the mixin. For example:
+//
+//     @use 'just-type';
+//
+//     .your-div {
+//       @include just-type.configure(
+//         $font-stack: (
+//           'headings': ('PT Serif', serif),
+//           'body': ('PT Sans', sans-serif),
+//           'mono': ('Roboto Mono', monospace),
+//         )
+//       );
+//
+//       @include just-type.typography;
+//     }

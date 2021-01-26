@@ -1,0 +1,31 @@
+@use 'sass:map';
+@use 'config';
+
+@function scale-font-size($exponent) {
+  $start: 1rem;
+  $base: config.font-size-scale('base');
+  $ratio: config.font-size-scale('ratio');
+  @return -scale($start, $base, $ratio, $exponent);
+}
+
+@function scale-whitespace($exponent) {
+  $start: config.whitespace();
+  $base: config.whitespace-scale('base');
+  $ratio: config.whitespace-scale('ratio');
+  @return -scale($start, $base, $ratio, $exponent);
+}
+
+@function -scale($start, $base, $ratio, $exponent) {
+  @if $exponent < 0 {
+    @error 'Negative scaling is not supported.';
+  }
+
+  $growth: 1;
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $growth: $growth * $ratio;
+    }
+  }
+
+  @return $start * $base * $growth;
+}
