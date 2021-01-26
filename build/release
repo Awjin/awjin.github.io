@@ -1,0 +1,10 @@
+#!/bin/bash
+
+git checkout prod
+mkdir trash
+mv * trash
+mv trash/dist/* .
+rm -rf trash
+touch .nojekyll
+git add .
+git commit -m "New release"

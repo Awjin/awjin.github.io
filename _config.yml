@@ -21,7 +21,7 @@ highlighter: rouge
 
 # Build
 source: src
-destination: docs
+destination: dist
 exclude:
   - styles
 keep_files:
