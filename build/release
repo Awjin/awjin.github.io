@@ -1,12 +1,29 @@
 #!/bin/bash
 
+printf '\n******** Building Sass...\n\n'
+sass \
+  --style compressed \
+  --no-source-map \
+  src/styles/page.scss:dist/styles/page.css \
+  src/styles/post.scss:dist/styles/post.css
+
+printf '\n******** Building site...\n\n'
+jekyll build --trace
+
+printf '\n******** Checking out prod...\n\n'
 git checkout prod
+
+printf '\n******** Deleting everything except dist files...\n\n'
 mkdir trash
 mv * trash
 mv trash/dist/* .
 rm -rf trash
 touch .nojekyll
+
+printf '\n******** Committing and pushing...\n\n'
 git add .
 git commit -m "New release"
 git push
+
+printf '\n******** Checking out master...\n\n'
 git checkout master
