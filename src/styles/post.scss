@@ -11,30 +11,33 @@ body {
 .posts {
   font-size: 110%;
   display: grid;
-  grid-template-columns: 1fr 6em;
+  grid-template-columns: 1fr 6rem;
   grid-row-gap: just-type.whitespace();
   align-items: baseline;
 
   .post-date {
     text-align: right;
     font-size: 80%;
+    color: just-type.color('light');
   }
 }
 
 article {
   @include syntax.highlight(just-type.color('light'));
 
-  padding-bottom: 2 * just-type.whitespace();
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0.5 * just-type.whitespace();
+  }
 
   .subtitle {
-    margin-top: 0;
     margin-bottom: just-type.scale-whitespace(2);
     color: just-type.color('light');
   }
 
   pre,
   img {
-    border-radius: 1em;
+    border-radius: 1rem;
   }
 
   img {

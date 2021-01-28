@@ -10,8 +10,8 @@ html {
   h1,
   h2,
   p {
-    margin: 0;
-    margin-bottom: 1.75 * just-type.whitespace();
+    margin-top: 0;
+    margin-bottom: just-type.whitespace();
     font-family: just-type.font-stack('body');
   }
 
@@ -29,7 +29,6 @@ html {
   }
 
   img {
-    width: 100%;
     margin: 0;
   }
 }
@@ -48,8 +47,8 @@ html {
 }
 
 .projects {
-  column-gap: 3 * just-type.whitespace();
-  row-gap: 2 * just-type.whitespace();
+  column-gap: 2.5 * just-type.whitespace();
+  row-gap: just-type.whitespace();
 }
 
 .project {
@@ -57,7 +56,6 @@ html {
     outline: none;
 
     img {
-      width: 90%;
       margin: 0;
       border: 1px solid #aaa;
       border-radius: 0.5rem;
@@ -89,12 +87,8 @@ html {
 
   h2 {
     margin-top: 0.6 * just-type.whitespace();
-    margin-bottom: 1.2 * just-type.whitespace();
+    margin-bottom: 0.1 * just-type.whitespace();
     font-family: just-type.font-stack('body');
     font-size: 115%;
-  }
-
-  a + p {
-    margin-top: -1 * just-type.whitespace();
   }
 }

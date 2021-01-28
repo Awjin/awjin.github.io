@@ -5,13 +5,30 @@ $transition-fast: 50ms cubic-bezier(0, 0, 0.2, 1);
 $transition-slow: 150ms cubic-bezier(0, 0, 0.2, 1) 250ms;
 
 html {
-  @include just-type.configure($font-stack: (
-    'headings': ('PT Serif', serif),
-    'body': ('PT Sans', sans-serif),
-    'mono': ('Roboto Mono', monospace),
-  ));
+  @include just-type.configure(
+    $responsive-breakpoint: 1000px,
+    $font-size: 16px,
+    $font-stack: (
+      'heading': ('PT Serif', serif),
+      'body': ('PT Sans', sans-serif),
+      'mono': ('Roboto Mono', monospace),
+    ),
+    $font-size-scale: (
+      'base': 1,
+      'ratio': 1.33333,
+    ),
+    $whitespace-scale: (
+      'base': 1,
+      'ratio': 1.5,
+    ),
+    $color: (
+      'normal': rgba(0, 0, 0, 0.95),
+      'light': rgba(0, 0, 0, 0.6),
+      'action': rgba(17, 68, 228, 0.95),
+    ),
+  );
   @include just-type.typography;
-  padding: just-type.whitespace() just-type.whitespace() (7 * just-type.whitespace()) just-type.whitespace();
+  padding: 0.75 * just-type.whitespace() 1.5rem 25vh 1.5rem;
 }
 
 body {
@@ -20,27 +37,27 @@ body {
 }
 
 header {
-  padding-bottom: 3 * just-type.whitespace();
+  padding-bottom: just-type.scale-whitespace(3);
   font-size: 110%;
   font-weight: bold;
-  letter-spacing: 0.065em;
+  letter-spacing: 0.075rem;
   user-select: none;
 
   nav {
     display: flex;
     align-items: center;
-    margin-right: -0.6 * just-type.whitespace();
+    margin-right: -0.55rem;
   }
 
   .separator {
-    padding: 0 (0.45 * just-type.whitespace());
+    padding: 0 0.35rem;
     color: just-type.color('action');
     opacity: 0.6;
   }
 
   a {
     display: block;
-    padding: 0.6 * just-type.whitespace();
+    padding: 0.55rem;
     opacity: 0.6;
     transition: transform $transition-fast;
 
@@ -58,11 +75,12 @@ header {
 
     &:first-child {
       margin-right: auto;
-      margin-left: -1 * just-type.whitespace();
+      margin-left: -1rem;
       opacity: 1;
 
       img {
-        width: 2.5em;
+        width: 2.75rem;
+        min-width: 2.75rem;
         margin: 0;
       }
 
@@ -83,10 +101,5 @@ main {
   &.loaded {
     opacity: 1;
     transform: none;
-  }
-
-  img {
-    max-width: 90%;
-    max-height: 90vh;
   }
 }
