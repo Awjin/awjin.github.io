@@ -1,6 +1,6 @@
 @use 'sass:map';
 @use 'base';
-@use 'just-type';
+@use 'guten-type';
 
 html {
   background: #fff;
@@ -11,8 +11,8 @@ html {
   h2,
   p {
     margin-top: 0;
-    margin-bottom: just-type.whitespace();
-    font-family: just-type.font-stack('body');
+    margin-bottom: guten-type.whitespace();
+    font-family: guten-type.font-stack('body');
   }
 
   h1 {
@@ -43,12 +43,12 @@ html {
 }
 
 .columns {
-  column-gap: just-type.whitespace();
+  column-gap: guten-type.whitespace();
 }
 
 .projects {
-  column-gap: 2.5 * just-type.whitespace();
-  row-gap: just-type.whitespace();
+  column-gap: 2.5 * guten-type.whitespace();
+  row-gap: guten-type.whitespace();
 }
 
 .project {
@@ -86,9 +86,9 @@ html {
   }
 
   h2 {
-    margin-top: 0.6 * just-type.whitespace();
-    margin-bottom: 0.1 * just-type.whitespace();
-    font-family: just-type.font-stack('body');
+    margin-top: 0.6 * guten-type.whitespace();
+    margin-bottom: 0.1 * guten-type.whitespace();
+    font-family: guten-type.font-stack('body');
     font-size: 115%;
   }
 }

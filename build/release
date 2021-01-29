@@ -18,7 +18,6 @@ mkdir trash
 mv * trash
 mv trash/dist/* .
 rm -rf trash
-touch .nojekyll
 
 printf '\n******** Committing and pushing...\n\n'
 git add .

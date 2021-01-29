@@ -29,3 +29,4 @@ keep_files:
 liquid:
   error_mode: strict
 strict_front_matter: true
+open_url: true

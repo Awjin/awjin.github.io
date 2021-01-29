@@ -1,11 +1,11 @@
 @use 'normalize';
-@use 'just-type';
+@use 'guten-type';
 
 $transition-fast: 50ms cubic-bezier(0, 0, 0.2, 1);
 $transition-slow: 150ms cubic-bezier(0, 0, 0.2, 1) 250ms;
 
 html {
-  @include just-type.configure(
+  @include guten-type.set(
     $responsive-breakpoint: 1000px,
     $font-size: 16px,
     $font-stack: (
@@ -27,8 +27,8 @@ html {
       'action': rgba(17, 68, 228, 0.95),
     ),
   );
-  @include just-type.typography;
-  padding: 0.75 * just-type.whitespace() 1.5rem 25vh 1.5rem;
+  @include guten-type.press;
+  padding: 0.75 * guten-type.whitespace() 1.5rem 20vh 1.5rem;
 }
 
 body {
@@ -37,7 +37,7 @@ body {
 }
 
 header {
-  padding-bottom: just-type.scale-whitespace(3);
+  padding-bottom: guten-type.scale-whitespace(3);
   font-size: 110%;
   font-weight: bold;
   letter-spacing: 0.075rem;
@@ -51,7 +51,7 @@ header {
 
   .separator {
     padding: 0 0.35rem;
-    color: just-type.color('action');
+    color: guten-type.color('action');
     opacity: 0.6;
   }
 
