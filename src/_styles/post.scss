@@ -1,7 +1,7 @@
 @use 'sass:map';
 @use 'base';
-@use 'guten-type';
-@use 'syntax';
+@use 'vendor/guten-type';
+@use 'vendor/syntax';
 
 html,
 body {

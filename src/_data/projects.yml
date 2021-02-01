@@ -1,0 +1,29 @@
+- name: 'Kare.pkg'
+  caption: '32x32 pixel art creator'
+  link: 'https://awjin.me/kare-pkg'
+  img: 'assets/projects/kare-pkg.png'
+
+- name: 'GutenType'
+  caption: 'Sass library for generating correct typography'
+  link: 'https://awjin.me/guten-type'
+  img: 'assets/projects/guten-type.png'
+
+- name: 'Irresistibly Clicky'
+  caption: 'Super tactile buttons'
+  link: 'https://awjin.me/irresistibly-clicky'
+  img: 'assets/projects/irresistibly-clicky.png'
+
+- name: 'Stylish Markdown'
+  caption: 'Crisp CSS theme for Markdown-generated HTML'
+  link: 'https://awjin.me/stylish-markdown'
+  img: 'assets/projects/stylish-markdown.png'
+
+- name: 'Profresh Resum&eacute;'
+  caption: 'Pro, yet fresh, LaTex resumé template'
+  link: 'https://github.com/awjin/pro-fresh-resume'
+  img: 'assets/projects/pro-fresh-resume.png'
+
+- name: 'Guten'
+  caption: 'Web publishing platform optimized for long-form reading'
+  link: 'https://awjin.me/guten'
+  img: 'assets/projects/guten.png'

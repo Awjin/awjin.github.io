@@ -22,10 +22,8 @@ highlighter: rouge
 # Build
 source: src
 destination: dist
-exclude:
-  - styles
 keep_files:
-  - styles
+  - assets/styles
 liquid:
   error_mode: strict
 strict_front_matter: true

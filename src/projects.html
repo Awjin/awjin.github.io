@@ -4,51 +4,13 @@ header_value: projects
 ---
 
 <div class="projects">
+  {% for project in site.data.projects %}
   <div class="project">
-    <a href="https://awjin.me/kare-pkg">
-      <img src="assets/projects/kare-pkg.png" />
-      <h2>Kare.pkg</h2>
+    <a href="{{ project.link }}">
+      <img src="{{ project.img | relative_url }}" />
+      <h2>{{ project.name }}</h2>
     </a>
-    <p>32x32 pixel art creator</p>
+    <p>{{ project.caption }}</p>
   </div>
-
-  <div class="project">
-    <a href="https://awjin.me/guten-type">
-      <img src="assets/projects/guten-type.png" />
-      <h2>GutenType</h2>
-    </a>
-    <p>Sass library for generating correct typography</p>
-  </div>
-
-  <div class="project">
-    <a href="https://awjin.me/irresistibly-clicky">
-      <img src="assets/projects/irresistibly-clicky.png" />
-      <h2>Irresistibly Clicky</h2>
-    </a>
-    <p>Super tactile buttons</p>
-  </div>
-
-  <div class="project">
-    <a href="https://awjin.me/stylish-markdown">
-      <img src="assets/projects/stylish-markdown.png" />
-      <h2>Stylish Markdown</h2>
-    </a>
-    <p>Crisp CSS theme for Markdown-generated HTML</p>
-  </div>
-
-  <div class="project">
-    <a href="https://github.com/awjin/pro-fresh-resume">
-      <img src="assets/projects/pro-fresh-resume.png" />
-      <h2>Profresh Resum&eacute;</h2>
-    </a>
-    <p>Pro, yet fresh, LaTex resumé template</p>
-  </div>
-
-  <div class="project">
-    <a href="https://awjin.me/guten">
-      <img src="assets/projects/guten.png" />
-      <h2>Guten</h2>
-    </a>
-    <p>Web publishing platform optimized for long-form reading</p>
-  </div>
+  {% endfor %}
 </div>

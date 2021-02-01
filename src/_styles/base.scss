@@ -1,5 +1,5 @@
-@use 'normalize';
-@use 'guten-type';
+@use 'vendor/normalize';
+@use 'vendor/guten-type';
 
 $transition-fast: 50ms cubic-bezier(0, 0, 0.2, 1);
 $transition-slow: 150ms cubic-bezier(0, 0, 0.2, 1) 250ms;

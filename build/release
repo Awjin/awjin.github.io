@@ -4,8 +4,8 @@ printf '\n******** Building Sass...\n\n'
 sass \
   --style compressed \
   --no-source-map \
-  src/styles/page.scss:dist/styles/page.css \
-  src/styles/post.scss:dist/styles/post.css
+  src/_styles/page.scss:dist/assets/styles/page.css \
+  src/_styles/post.scss:dist/assets/styles/post.css
 
 printf '\n******** Building site...\n\n'
 jekyll build --trace
