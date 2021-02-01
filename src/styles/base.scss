@@ -14,10 +14,12 @@ html {
       'mono': ('Roboto Mono', monospace),
     ),
     $font-size-scale: (
+      'start': 4,
       'base': 1,
       'ratio': 1.33333,
     ),
     $whitespace-scale: (
+      'start': 4,
       'base': 1,
       'ratio': 1.5,
     ),
